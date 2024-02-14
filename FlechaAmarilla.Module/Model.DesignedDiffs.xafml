@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="FlechaAmarilla">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="PermissionPUserNav" Caption="PermissionPolicyUser" ViewId="PermissionPolicyUser_ListView" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="23.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.2.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Invoice_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="14.091858037578287">
+            <LayoutGroup Id="Invoice" RelativeSize="100">
+              <LayoutGroup Id="Invoice_col1" RelativeSize="49.96817313812858">
+                <LayoutItem Id="Customer" ViewItem="Customer" Index="0" RelativeSize="33.333333333333336" IsNewNode="True" />
+                <LayoutItem Id="InvoiceName" Index="1" RelativeSize="25" />
+                <LayoutItem Id="InvoiceNumber" Index="2" RelativeSize="41.666666666666664" />
+                <LayoutItem Id="InvoiceDate" Index="3" RelativeSize="27.083333333333332" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Invoice_col2" RelativeSize="50.03182686187142">
+                <LayoutItem Id="InvoiceDate" ViewItem="InvoiceDate" Index="0" RelativeSize="33.333333333333336" IsNewNode="True" />
+                <LayoutItem Id="Cost" RelativeSize="33.333333333333336" Index="1" />
+                <LayoutItem Id="Order" RelativeSize="33.333333333333336" Index="2" />
+                <LayoutItem Id="Customer" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="85.90814196242171" Index="1">
+            <LayoutGroup Id="InvoiceDetails" RelativeSize="100">
+              <LayoutItem Id="InvoiceDetails" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Payments" ShowCaption="True" Index="1" RelativeSize="100" IsNewNode="True" Removed="True">
+              <LayoutItem Id="Payments" ViewItem="Payments" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
